@@ -7,20 +7,12 @@ import { Athlete, AthleteFilter } from "../components";
 
 const ThirdPage = () => {
   const { olympic } = useTypedSelector((state) => state.WinnersState);
-  const [pagination, setPagination] = useState({
-    page: 1,
-    amount: 0,
-  });
+  const [page, setPage] = useState<number>(1);
 
   const [search, setSearch] = useState({ search: "", amountOnPage: 9 });
 
-  const count: number = Math.ceil(olympic.length / search.amountOnPage);
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
-    setPagination({
-      ...pagination,
-      amount: pagination.amount + search.amountOnPage,
-      page: value,
-    });
+    setPage(value);
   };
 
   const SearchedPosts: IOlympic[] = useMemo(() => {
@@ -28,6 +20,7 @@ const ThirdPage = () => {
       post.athlete.toLowerCase().includes(search.search.toLowerCase())
     );
   }, [search]);
+  const count: number = Math.ceil(SearchedPosts.length / search.amountOnPage);
 
   return (
     <div
@@ -45,14 +38,14 @@ const ThirdPage = () => {
         <AthleteFilter search={search} setSearch={setSearch} />
 
         {SearchedPosts.slice(
-          pagination.amount,
-          pagination.amount + search.amountOnPage
+          (page - 1) * search.amountOnPage,
+          page * search.amountOnPage
         ).map((olympic: IOlympic, id: number) => (
           <Athlete key={id} olympic={olympic} />
         ))}
         <Pagination
           count={count}
-          page={pagination.page}
+          page={page}
           onChange={handleChange}
           variant="outlined"
         />
