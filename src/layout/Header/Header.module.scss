@@ -4,15 +4,20 @@
 
 .nav {
   display: flex;
+
   & li {
     padding-left: 20px;
   }
 }
+
 .link {
-  font-size: 15px;
   transition: all 0.5s linear;
+
+  font-size: 15px;
+
   &:hover {
     transform: scale(1.2);
+
     color: var(--hoverLink);
   }
 }

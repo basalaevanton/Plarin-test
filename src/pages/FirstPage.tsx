@@ -1,30 +1,22 @@
-import React, { useEffect } from 'react';
-import { withLayout } from '../layout/Layout';
+import React, { useEffect } from "react";
+import { withLayout } from "../layout/Layout";
 
-import { Typography } from '@mui/material';
-import { useTypedSelector, useActions } from '../hooks';
-import { Athlete } from '../components';
+import { Typography } from "@mui/material";
+import { useTypedSelector, useActions } from "../hooks";
+import { Athlete } from "../components";
 
 const FirstPage = () => {
   const { olympic, isLoading } = useTypedSelector(
     (state) => state.WinnersState
   );
-  const { fetchWinners } = useActions();
 
-  useEffect(() => {
-    fetchWinners();
-  }, []);
-
-  if (isLoading) {
-    return <div>LOADING.....</div>;
-  }
   return (
     <>
       <Typography
         variant="h4"
         gutterBottom
         component="div"
-        style={{ marginBottom: '35px' }}
+        style={{ marginBottom: "35px" }}
       >
         Задача №1: Атлеты с 10 по 20
       </Typography>

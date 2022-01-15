@@ -1,4 +1,4 @@
- // дан JSON: "https://www.ag-grid.com/example-assets/olympic-winners.json"
+// дан JSON: "https://www.ag-grid.com/example-assets/olympic-winners.json"
 // 1. Вывести с 10 по 20 элементы массива, используя следующую структуру:
 
 // + John Smith

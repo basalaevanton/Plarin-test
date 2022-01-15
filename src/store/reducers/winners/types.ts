@@ -1,4 +1,4 @@
-import { IOlympic } from '../../../interfaces/winners.interface';
+import { IOlympic } from "../../../interfaces/winners.interface";
 
 export interface WinnersState {
   olympic: IOlympic[];
@@ -7,9 +7,9 @@ export interface WinnersState {
 }
 
 export enum WinnersActionEnum {
-  SET_WINNERS = 'SET_WINNERS',
-  SET_WINNERS_ERROR = 'SET_WINNERS_ERROR',
-  SET_WINNERS_IS_LOADING = 'SET_WINNERS_IS_LOADING',
+  SET_WINNERS = "SET_WINNERS",
+  SET_WINNERS_ERROR = "SET_WINNERS_ERROR",
+  SET_WINNERS_IS_LOADING = "SET_WINNERS_IS_LOADING",
 }
 
 export interface SetWinnersAction {

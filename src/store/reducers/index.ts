@@ -1,4 +1,4 @@
-import WinnersState from './winners';
+import WinnersState from "./winners";
 
 export default {
   WinnersState,

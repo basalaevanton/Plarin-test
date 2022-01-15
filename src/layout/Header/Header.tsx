@@ -1,11 +1,11 @@
-import React from 'react';
-import { HeaderProps } from './Header.props';
-import styles from './Header.module.scss';
+import React from "react";
+import { HeaderProps } from "./Header.props";
+import styles from "./Header.module.scss";
 
-import cn from 'classnames';
-import { AppBar, Toolbar, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { HeaderLinks } from '../../helpers/navLinks';
+import cn from "classnames";
+import { AppBar, Toolbar, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import { HeaderLinks } from "../../helpers/navLinks";
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
   return (

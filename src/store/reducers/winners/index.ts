@@ -1,8 +1,8 @@
-import { WinnersAction, WinnersState, WinnersActionEnum } from './types';
+import { WinnersAction, WinnersState, WinnersActionEnum } from "./types";
 
 const initialState: WinnersState = {
   olympic: [],
-  error: '',
+  error: "",
   isLoading: false,
 };
 

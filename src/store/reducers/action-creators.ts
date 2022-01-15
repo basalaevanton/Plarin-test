@@ -1,3 +1,3 @@
-import { WinnersActionCreators } from './winners/action-creators';
+import { WinnersActionCreators } from "./winners/action-creators";
 
 export const allActionCreators = { ...WinnersActionCreators };

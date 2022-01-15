@@ -5,9 +5,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    'header'
-    'body'
-    'footer';
+    "header"
+    "body"
+    "footer";
 }
 
 .header {
@@ -23,9 +23,9 @@
   flex-direction: column;
 
   width: 100%;
+  margin-top: 100px;
   padding: 0 15px;
   grid-area: body;
-  margin-top: 100px;
 }
 
 .footer {

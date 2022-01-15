@@ -1,14 +1,14 @@
-import { AppDispatch } from '../../index';
+import { AppDispatch } from "../../index";
 
-import { IOlympic } from '../../../interfaces/winners.interface';
+import { IOlympic } from "../../../interfaces/winners.interface";
 import {
   SetErrorAction,
   SetIsLoadingAction,
   SetWinnersAction,
   WinnersActionEnum,
-} from './types';
+} from "./types";
 
-import axios from 'axios';
+import axios from "axios";
 
 // import { API } from '../../../helpers/api';
 
@@ -31,7 +31,7 @@ export const WinnersActionCreators = {
       dispatch(WinnersActionCreators.setWinnersIsLoading(true));
 
       const response = await axios.get(
-        'https://www.ag-grid.com/example-assets/olympic-winners.json'
+        "https://www.ag-grid.com/example-assets/olympic-winners.json"
       );
 
       dispatch(WinnersActionCreators.setWinners(response.data));
@@ -40,7 +40,9 @@ export const WinnersActionCreators = {
         WinnersActionCreators.setWinnersError(e.response?.data?.message)
       );
     } finally {
-      dispatch(WinnersActionCreators.setWinnersIsLoading(false));
+      setTimeout(() => {
+        dispatch(WinnersActionCreators.setWinnersIsLoading(false));
+      }, 500);
     }
   },
 };
