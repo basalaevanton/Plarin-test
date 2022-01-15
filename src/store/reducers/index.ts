@@ -1,1 +1,5 @@
-export default {};
+import WinnersState from './winners';
+
+export default {
+  WinnersState,
+};
