@@ -3,20 +3,26 @@ import { withLayout } from '../layout/Layout';
 
 import { Typography } from '@mui/material';
 import { useTypedSelector, useActions } from '../hooks';
+import { Athlete } from '../components';
 
 const FirstPage = () => {
-  const { olympic } = useTypedSelector((state) => state.WinnersState);
+  const { olympic, isLoading } = useTypedSelector(
+    (state) => state.WinnersState
+  );
   const { fetchWinners } = useActions();
 
   useEffect(() => {
     fetchWinners();
   }, []);
 
-  console.log(olympic);
+  // console.log(olympic[0]);
 
+  if (isLoading) {
+    return <div>LOADING.....</div>;
+  }
   return (
     <>
-      <h1>Start React KIT</h1>
+      <Athlete olympic={olympic[0]} />
     </>
   );
 };
