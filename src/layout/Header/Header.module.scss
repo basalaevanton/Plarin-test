@@ -1,12 +1,18 @@
 .header {
-  display: flex;
   align-items: center;
-  flex-direction: column;
-
-  border-bottom: 1px solid black;
 }
 
 .nav {
   display: flex;
-  flex-direction: column;
+  & li {
+    padding-left: 20px;
+  }
+}
+.link {
+  font-size: 15px;
+  transition: all 0.5s linear;
+  &:hover {
+    transform: scale(1.2);
+    color: var(--hoverLink);
+  }
 }

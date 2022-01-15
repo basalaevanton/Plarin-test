@@ -12,7 +12,7 @@ body {
   color: black;
   background: white;
 
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   line-height: 24px;
 }
@@ -30,6 +30,7 @@ ul {
 }
 
 :root {
-  // --black: black;
-  // --white: #FFF;
+  --black: black;
+  --white: #fff;
+  --hoverLink: rgb(228, 164, 86);
 }
