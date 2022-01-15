@@ -7,7 +7,7 @@ export interface IHeaderLinks {
 export const HeaderLinks: IHeaderLinks[] = [
   {
     id: 1,
-    name: 'First page',
+    name: 'Атлеты с 10 по 20',
     link: '/',
   },
   {

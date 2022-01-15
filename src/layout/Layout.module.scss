@@ -5,9 +5,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    "header"
-    "body"
-    "footer";
+    'header'
+    'body'
+    'footer';
 }
 
 .header {
@@ -16,16 +16,16 @@
 }
 
 .body {
-  position: relative;
+  // position: relative;
 
   display: flex;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
-  justify-content: center;
 
   width: 100%;
   padding: 0 15px;
   grid-area: body;
+  margin-top: 100px;
 }
 
 .footer {
