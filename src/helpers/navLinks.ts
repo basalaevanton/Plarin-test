@@ -15,4 +15,9 @@ export const HeaderLinks: IHeaderLinks[] = [
     name: "Таблица: страны и их медали",
     link: "/second",
   },
+  {
+    id: 3,
+    name: "Пагинация и поиск атлетов",
+    link: "/third",
+  },
 ];
