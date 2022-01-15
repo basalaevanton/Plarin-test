@@ -10,7 +10,7 @@ import { Collapse, Typography } from "@mui/material";
 export const Athlete = ({ olympic, ...props }: AthleteProps): JSX.Element => {
   const [open, setOpen] = useState<boolean>(false);
   return (
-    <div className={styles.athlete}>
+    <div className={styles.athlete} {...props}>
       <Typography
         variant="h4"
         gutterBottom
@@ -43,5 +43,3 @@ export const Athlete = ({ olympic, ...props }: AthleteProps): JSX.Element => {
     </div>
   );
 };
-
-export default Athlete;

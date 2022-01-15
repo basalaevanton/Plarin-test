@@ -16,6 +16,7 @@ export function descendingComparator<T>(
   return 0;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function getComparator<Key extends keyof any>(
   order: Order,
   orderBy: Key

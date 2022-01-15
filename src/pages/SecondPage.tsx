@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
-import { useActions, useTypedSelector } from "../hooks";
+import React from "react";
+import { useTypedSelector } from "../hooks";
 import { IcountryMedals } from "../interfaces/countryMedals.interface";
 import { withLayout } from "../layout/Layout";
 import { TableMedals } from "../components";
+import { Typography } from "@mui/material";
 
 const SecondPage = () => {
   const { olympic } = useTypedSelector((state) => state.WinnersState);
@@ -42,7 +43,6 @@ const SecondPage = () => {
       },
       0
     );
-
     const helpObj = {
       country: countryEl,
       total: allMedals,
@@ -55,6 +55,15 @@ const SecondPage = () => {
 
   return (
     <>
+      <Typography
+        variant="h4"
+        gutterBottom
+        component="div"
+        style={{ marginBottom: "35px" }}
+      >
+        Задача №2: Страны и их медали
+      </Typography>
+
       <TableMedals countryMedals={countryMedals} />
     </>
   );

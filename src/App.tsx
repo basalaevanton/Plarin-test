@@ -4,11 +4,10 @@ import { Route, Routes } from "react-router-dom";
 import SecondPage from "./pages/SecondPage";
 import FirstPage from "./pages/FirstPage";
 import { useActions, useTypedSelector } from "./hooks";
+import { Loading } from "./components";
 
 const App = function (): JSX.Element {
-  const { olympic, isLoading } = useTypedSelector(
-    (state) => state.WinnersState
-  );
+  const { isLoading } = useTypedSelector((state) => state.WinnersState);
   const { fetchWinners } = useActions();
 
   useEffect(() => {
@@ -16,7 +15,7 @@ const App = function (): JSX.Element {
   }, []);
 
   if (isLoading) {
-    return <div>LOADING.....</div>;
+    return <Loading />;
   }
   return (
     <>

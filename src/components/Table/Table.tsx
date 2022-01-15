@@ -32,6 +32,7 @@ export const TableMedals = ({
       <TableContainer
         component={Paper}
         sx={{ display: "flex", justifyContent: "space-around" }}
+        {...props}
       >
         <Table sx={{ maxWidth: 1000 }} aria-label="a dense table">
           <TableHead>
@@ -92,5 +93,3 @@ export const TableMedals = ({
     </>
   );
 };
-
-export default Table;

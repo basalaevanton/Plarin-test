@@ -12,7 +12,7 @@ export const HeaderLinks: IHeaderLinks[] = [
   },
   {
     id: 2,
-    name: "Second page",
+    name: "Таблица: страны и их медали",
     link: "/second",
   },
 ];

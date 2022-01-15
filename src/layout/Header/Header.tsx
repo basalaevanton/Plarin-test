@@ -7,7 +7,7 @@ import { AppBar, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { HeaderLinks } from "../../helpers/navLinks";
 
-export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
+export const Header = ({ className }: HeaderProps): JSX.Element => {
   return (
     <AppBar position="fixed" className={cn(className, styles.header)}>
       <Toolbar>

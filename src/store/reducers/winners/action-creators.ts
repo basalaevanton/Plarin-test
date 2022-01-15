@@ -26,6 +26,7 @@ export const WinnersActionCreators = {
     payload,
   }),
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   fetchWinners: () => async (dispatch: AppDispatch) => {
     try {
       dispatch(WinnersActionCreators.setWinnersIsLoading(true));
@@ -35,6 +36,7 @@ export const WinnersActionCreators = {
       );
 
       dispatch(WinnersActionCreators.setWinners(response.data));
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (e: any) {
       dispatch(
         WinnersActionCreators.setWinnersError(e.response?.data?.message)
@@ -42,7 +44,7 @@ export const WinnersActionCreators = {
     } finally {
       setTimeout(() => {
         dispatch(WinnersActionCreators.setWinnersIsLoading(false));
-      }, 500);
+      }, 1000);
     }
   },
 };

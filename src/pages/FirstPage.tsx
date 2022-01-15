@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { withLayout } from "../layout/Layout";
 
 import { Typography } from "@mui/material";
-import { useTypedSelector, useActions } from "../hooks";
+import { useTypedSelector } from "../hooks";
 import { Athlete } from "../components";
+import { IOlympic } from "../interfaces/winners.interface";
 
 const FirstPage = () => {
-  const { olympic, isLoading } = useTypedSelector(
-    (state) => state.WinnersState
-  );
+  const { olympic } = useTypedSelector((state) => state.WinnersState);
 
   return (
     <>
@@ -20,7 +19,7 @@ const FirstPage = () => {
       >
         Задача №1: Атлеты с 10 по 20
       </Typography>
-      {olympic.slice(9, 19).map((olympic, id) => (
+      {olympic.slice(9, 19).map((olympic: IOlympic, id: number) => (
         <Athlete key={id} olympic={olympic} />
       ))}
     </>
